@@ -3,9 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 
 import { AppComponent }    from './app.component';
-import { HeaderComponent } from './scaffold/header.component';
-import { NavComponent } from './scaffold/nav.component';
-import { FooterComponent } from './scaffold/footer.component';
+import {
+    HeaderComponent,
+    NavComponent,
+    FooterComponent
+}  from './scaffold/index';
 
 @NgModule({
   imports      :
