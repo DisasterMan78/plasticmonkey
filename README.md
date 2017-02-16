@@ -5,20 +5,22 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 ## The Story So Far
 
 #### Basic install:
-```$ npm install -g @angular/cli
 
-$ npm new plasticmonkey
+`$ npm install -g @angular/cli`
 
-$ cd plasticmonkey```
+`$ npm new plasticmonkey`
+
+`$ cd plasticmonkey`
 
 #### Node config:
-```$ echo node_modules >> .gitignore
 
-$ echo npm-debug.log >> .gitignore
+`$ echo node_modules >> .gitignore`
 
-$ echo save=true >> .npmrc
+`$ echo npm-debug.log >> .gitignore`
 
-$ echo save-exact=true >> .npmrc```
+`$ echo save=true >> .npmrc`
+
+`$ echo save-exact=true >> .npmrc`
 
 #### Commit node_modules to own git repo
 
@@ -28,19 +30,19 @@ What what whyyyy?
 * Updated packages can introduce regressions or cause conflicts
 * I've already started this project from scratch due to being unable to build on a new machine
 * Shrinkwrap is unreliable due to issues with 'extraneous' packages Shrinkwrap doesn't recognise from package.json - usually as they have been installed by other packages with post install hooks
-* It's all covered quite well here - Konstantin came to the same conclusion and solution as me. It's not ideal, but neither are any of the alternatives: https://medium.com/@bestander_nz/my-node-modules-are-in-git-again-4fb18f5671a#.lvfki71a9
+* It's all covered quite well here - Konstantin came to the same conclusion and solution as me. It's not ideal, but neither are any of the alternatives: [My node_modules are in git again](https://medium.com/@bestander_nz/my-node-modules-are-in-git-again-4fb18f5671a#.lvfki71a9)
 
-```$ cd node_modules
+`$ cd node_modules`
 
-$ git init
+`$ git init`
 
-$ git add -A
+`$ git add -A`
 
-$ git commit -m "Initial commit of node_modules for plasticmonkey"
+`$ git commit -m "Initial commit of node_modules for plasticmonkey"`
 
-$ git remote add origin git@github.com:DisasterMan78/plasticmonkey-nodemodules.git
+`$ git remote add origin git@github.com:DisasterMan78/plasticmonkey-nodemodules.git`
 
-$ git push -u origin master```
+`$ git push -u origin master`
 
 And that's where we are with initial setup.
 
@@ -54,7 +56,25 @@ I'd much rather be all loosey-goosey, using latest versions wherever possible, b
 
 ## Next steps
 
-Install Material Design for Angular - This is not being done with Angiular CLI Tools due to issues with missing node dependencies
+Install Material Design for Angular - This is not being done with Angiular CLI Tools due to issues with missing node dependencies - the same thing that caused me to rebuild this project, so I'm guessing they just haven't been updated.
+
+`$ npm install --save @angular/material`
+
+Let's get on the SASS horse - we are going to use node-sass as it uses the C compiler and is far faster than the Ruby compiler. If you don't know this by now, go sit on the naughty step.
+
+`$ npm install node-sass --save-dev`
+
+Angular Material 2 doesn't have the layout support of version 1 - however the ng team have recently released a beta of @angular/flex-layout to address this:
+
+[NPM: @angular/flex-layout](https://www.npmjs.com/package/@angular/flex-layout)
+
+[Github: flex-layout Wiki](https://github.com/angular/flex-layout/wiki)
+
+[Flex-layout demos](https://tburleson-layouts-demos.firebaseapp.com/#/responsive)
+
+`$ npm install @angular/flex-layout`
+
+
 
 ---
 
